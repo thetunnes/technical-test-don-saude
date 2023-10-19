@@ -1,10 +1,8 @@
+/* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
 	],
   theme: {
@@ -50,6 +48,18 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        gray: {
+          800: '#101828',
+          700: '#1219298F',
+          600: '#475467',
+          500: '#667085',
+          400: '#E6EEF4',
+          100: '#F2F4F7',
+        },
+        pink: {
+          500: '#D0005E',
+          100: '#FFF0F7'
+        }
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,6 +80,9 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      gridTemplateColumns: {
+        layout: 'minmax(60px, 200px) 1fr'
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
