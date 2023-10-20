@@ -81,6 +81,44 @@ export function Partner() {
                   </div>
                 </TData>
               </TRow>
+              <TRow>
+                <TData className="pl-4 py-3">XXXXXXXX</TData>
+                <TData>
+                  <div className="flex flex-col gap-0.5">
+                    <strong>Username Name</strong>
+                    <span>XXX.XXX.XXX-XX</span>
+                  </div>
+                </TData>
+                <TData>(XX) X XXXX-XXXX</TData>
+                <TData>XXXXXXXX</TData>
+                <TData>Partner Name</TData>
+                <TData className="px-4">
+                  <div className="flex items-center justify-center">
+                    <CircleDashed size={12} />
+                    <CircleDashed size={12} />
+                    <CircleDashed size={12} />
+                  </div>
+                </TData>
+              </TRow>
+              <TRow>
+                <TData className="pl-4 py-3">XXXXXXXX</TData>
+                <TData>
+                  <div className="flex flex-col gap-0.5">
+                    <strong>Username Name</strong>
+                    <span>XXX.XXX.XXX-XX</span>
+                  </div>
+                </TData>
+                <TData>(XX) X XXXX-XXXX</TData>
+                <TData>XXXXXXXX</TData>
+                <TData>Partner Name</TData>
+                <TData className="px-4">
+                  <div className="flex items-center justify-center">
+                    <CircleDashed size={12} />
+                    <CircleDashed size={12} />
+                    <CircleDashed size={12} />
+                  </div>
+                </TData>
+              </TRow>
             </TBody>
           </Table>
 

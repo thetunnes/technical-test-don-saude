@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/select";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 import { z } from "zod";
 
 const partnerSchema = z.object({
@@ -35,11 +36,10 @@ interface Props {
 }
 
 export function FormPartner({ nextStep }: Props) {
+  const navigate = useNavigate()
   const form = useForm<IPartner>({
     resolver: zodResolver(partnerSchema),
   });
-
-  const { errors } = form.formState;
 
   function onSubmit(data: IPartner) {
     console.log(data);
@@ -47,7 +47,9 @@ export function FormPartner({ nextStep }: Props) {
     nextStep();
   }
 
-  console.log(errors);
+  function cancelChangePartner() {
+    navigate("/parceiros")
+  }
 
   return (
     <Form {...form}>
@@ -145,7 +147,7 @@ export function FormPartner({ nextStep }: Props) {
       </form>
 
       <footer className="w-full max-w-[500px] flex gap-3 self-end">
-        <Button variant="outline" size="lg" className="flex-1">
+        <Button variant="outline" size="lg" className="flex-1" onClick={() => cancelChangePartner()}>
           Cancelar
         </Button>
         <Button size="lg" className="flex-1" type="submit" form="newPartner">
