@@ -60,8 +60,8 @@ export function Sidebar() {
             to={menu.url}
             key={menu.title}
             className={({ isActive }) =>
-              `bg-transparent rounded-2xl px-4 py-2 text-gray-700 flex items-center gap-3 text-xs ${
-                isActive && `bg-pink-500 text-white `
+              `bg-transparent rounded-2xl px-4 py-2 text-gray-700 flex items-center gap-3 text-xs transition-all ${
+                isActive && `!bg-pink-500 text-white `
               }`
             }
           >
