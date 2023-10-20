@@ -12,6 +12,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { InputSearch } from "@/components/InputSearch";
+import { TBody, TData, THead, THeading, TRow, Table } from "@/components/Table";
 
 export function Partner() {
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ export function Partner() {
     <div className="w-full h-full flex flex-col">
       <TopHeader title="Parceiros">
         <Button
+          size="lg"
           className="flex items-center gap-2"
           onClick={() =>
             navigate("/parceiros/novo", {
@@ -40,60 +42,49 @@ export function Partner() {
         </div>
 
         <div className="w-full h-[calc(100%-6rem)] overflow-auto">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="whitespace-nowrap border-y border-border">
-                <th className="w-6">
-                  <div className="flex items-center text-xxs text-muted font-medium gap-0.5 px-4 py-3">
+          <Table>
+            <THead>
+              <TRow>
+                <THeading className="px-4 py-3">
+                  <div className="flex items-center text-xxs text-muted font-medium gap-0.5 ">
                     Organização <CaretDown />
                   </div>
-                </th>
-                <th>
-                  <div className="flex items-center text-xxs text-muted font-medium gap-0.5 px-4 py-3">
+                </THeading>
+                <THeading>
+                  <div className="flex items-center gap-0.5">
                     Nome <CaretDown />
                   </div>
-                </th>
-                <th className="text-xxs text-muted font-medium text-start">
-                  Telefones
-                </th>
-                <th className="text-xxs text-muted font-medium text-start">
-                  Código antigo
-                </th>
-                <th className="text-xxs text-muted font-medium text-start">
-                  Unidade preferida
-                </th>
-                <th className="w-[3.5rem] text-xxs text-muted font-medium text-start">
-                  Ações
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {Array.from(Array(12).keys()).map((item) => (
-                <tr className="whitespace-nowrap border-y border-border" key={item}>
-                  <td className="text-xxs text-accent pl-4 py-3 font-medium">
-                    XXXXXXX
-                  </td>
-                  <td className="text-xxs px-4 text-accent font-medium">
-                    Username Name
-                  </td>
-                  <td className="text-xxs text-accent font-medium">
-                    (XX) X XXXX-XXXX
-                  </td>
-                  <td className="text-xxs text-accent font-medium">XXXXXXX</td>
-                  <td className="text-xxs text-accent font-medium">
-                    Partner Name
-                  </td>
-                  <td className="w-max text-xxs text-accent pr-4 font-medium">
-                    <div className="w-max flex items-center justify-center gap-3 text-muted-foreground">
-                      <CircleDashed size={12} />
-                      <CircleDashed size={12} />
-                      <CircleDashed size={12} />
-                    </div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
+                </THeading>
+                <THeading>Telefones</THeading>
+                <THeading>Código</THeading>
+                <THeading>Unidade preferida</THeading>
+                <THeading className="px-4 py-3">Ações</THeading>
+              </TRow>
+            </THead>
+            <TBody>
+              <TRow>
+                <TData className="pl-4 py-3">XXXXXXXX</TData>
+                <TData>
+                  <div className="flex flex-col gap-0.5">
+                    <strong>Username Name</strong>
+                    <span>XXX.XXX.XXX-XX</span>
+                  </div>
+                </TData>
+                <TData>(XX) X XXXX-XXXX</TData>
+                <TData>XXXXXXXX</TData>
+                <TData>Partner Name</TData>
+                <TData className="px-4">
+                  <div className="flex items-center justify-center">
+                    <CircleDashed size={12} />
+                    <CircleDashed size={12} />
+                    <CircleDashed size={12} />
+                  </div>
+                </TData>
+              </TRow>
+            </TBody>
+          </Table>
+
+          {/* {Array.from(Array(12).keys()).map((item) => ( */}
         </div>
         <footer className="px-4 pt-2">
           <label className="font-medium text-xxs text-muted flex items-center gap-1">
@@ -104,11 +95,21 @@ export function Partner() {
               </SelectTrigger>
               <SelectContent className=" ">
                 <SelectGroup>
-                  <SelectItem variant="small" value="10">10</SelectItem>
-                  <SelectItem variant="small" value="20">20</SelectItem>
-                  <SelectItem variant="small" value="30">30</SelectItem>
-                  <SelectItem variant="small" value="40">40</SelectItem>
-                  <SelectItem variant="small" value="50">50</SelectItem>
+                  <SelectItem variant="small" value="10">
+                    10
+                  </SelectItem>
+                  <SelectItem variant="small" value="20">
+                    20
+                  </SelectItem>
+                  <SelectItem variant="small" value="30">
+                    30
+                  </SelectItem>
+                  <SelectItem variant="small" value="40">
+                    40
+                  </SelectItem>
+                  <SelectItem variant="small" value="50">
+                    50
+                  </SelectItem>
                 </SelectGroup>
               </SelectContent>
             </Select>{" "}

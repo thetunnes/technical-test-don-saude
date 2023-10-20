@@ -6,12 +6,12 @@ import { FormPartner } from "./components/FormPartner";
 export function NewPartner() {
   const [stateForm, setStateForm] = useState<1 | 2>(1);
   return (
-    <div className="w-full h-full flex flex-col">
+    <div className="w-full max-h-full h-max flex flex-col overflow-hidden">
       <TopHeader title="Novo parceiro" />
-      <section className="w-full h-[calc(100%-4rem)] flex flex-col gap-7 p-6 rounded-2xl bg-white">
+      <section className="w-full h-[calc(100%-5rem)] overflow-auto flex flex-col gap-7 p-6 rounded-2xl bg-white">
         <NavHeader stateForm={stateForm} />
 
-        <FormPartner />
+        <FormPartner nextStep={() => setStateForm(2)} />
       </section>
     </div>
   );

@@ -13,9 +13,6 @@ module.exports = {
       },
     },
     extend: {
-      fontSize: {
-        xxs: "0.625rem"
-      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -89,6 +86,9 @@ module.exports = {
       },
       gridTemplateColumns: {
         layout: 'minmax(60px, 200px) 1fr'
+      },
+      fontSize: {
+        xxs: "0.625rem"
       }
     },
   },
