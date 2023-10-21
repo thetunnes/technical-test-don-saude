@@ -15,6 +15,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { usePartnerContext } from "@/context/usePartnerContext";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
@@ -41,9 +42,11 @@ export function FormPartner({ nextStep }: Props) {
     resolver: zodResolver(partnerSchema),
   });
 
+  const { addPartner } = usePartnerContext()
+
   function onSubmit(data: IPartner) {
     console.log(data);
-
+    addPartner(data)
     nextStep();
   }
 
@@ -66,7 +69,7 @@ export function FormPartner({ nextStep }: Props) {
               <FormLabel className="font-medium text-sm text-muted-foreground">
                 Categoria
               </FormLabel>
-              <Select {...field}>
+              <Select onValueChange={field.onChange} value={field.value}>
                 <SelectTrigger>
                   <SelectValue placeholder="Selecione" />
                 </SelectTrigger>

@@ -8,7 +8,7 @@ export function NewPartner() {
   return (
     <div className="w-full max-h-full h-max flex flex-col overflow-hidden">
       <TopHeader title="Novo parceiro" />
-      <section className="w-full h-[calc(100%-5rem)] overflow-auto flex flex-col gap-7 p-6 rounded-2xl bg-white">
+      <section className="w-full h-full overflow-auto flex flex-col gap-7 p-6 rounded-2xl bg-white">
         <NavHeader stateForm={stateForm} />
 
         <FormPartner nextStep={() => setStateForm(2)} />
