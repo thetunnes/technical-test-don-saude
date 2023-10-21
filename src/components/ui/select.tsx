@@ -17,7 +17,7 @@ const triggerVariants = cva("w-full flex items-center justify-between", {
       default:
         "px-3 py-2 rounded-xl bg-transparent text-sm shadow-sm border border-border",
       small:
-        "w-max gap-1 mx-1 h-4 px-1 text-xxs font-bold text-accent bg-input border border-border rounded-full",
+        "w-max gap-1 mx-1 h-4 px-1 text-xsmall font-bold text-accent bg-input border border-border rounded-full",
     },
   },
   defaultVariants: {
@@ -106,7 +106,7 @@ const itemVariants = cva(
     variants: {
       variant: {
         default: "",
-        small: "pl-px py-px text-xxs justify-center",
+        small: "pl-px py-px text-xsmall justify-center",
       },
     },
     defaultVariants: {

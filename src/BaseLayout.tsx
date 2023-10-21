@@ -4,7 +4,7 @@ import { Header } from "./components/Header";
 
 export function BaseLayout() {
   return (
-    <div className="grid grid-cols-layout">
+    <div className="sm:grid grid-cols-layout">
       <Sidebar />
 
       <div className="w-full h-screen grid grid-rows-[80px_auto]">

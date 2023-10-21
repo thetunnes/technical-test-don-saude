@@ -19,7 +19,7 @@ export function ListPartners() {
         <THead>
           <TRow>
             <THeading className="px-4 py-3">
-              <div className="flex items-center text-xxs text-muted font-medium gap-0.5 ">
+              <div className="flex items-center text-xsmall text-muted font-medium gap-0.5 ">
                 Organização <CaretDown />
               </div>
             </THeading>

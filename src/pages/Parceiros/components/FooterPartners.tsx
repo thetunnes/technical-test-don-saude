@@ -51,7 +51,7 @@ export function FooterPartners() {
 
   return (
     <footer className="flex items-center justify-between px-4 pt-2">
-          <div className="font-medium text-xxs text-muted flex items-center gap-1">
+          <div className="font-medium text-xsmall text-muted flex items-center gap-1">
             <span>Mostrando</span>
             <Select onValueChange={(v) => setAmountPartnersInPage(Number(v))}>
               <SelectTrigger variant="small" icon="small">
@@ -74,7 +74,7 @@ export function FooterPartners() {
           {!!partners.length && (
             <div className="flex items-center gap-1">
             <button onClick={() => changePage(page > 0 ? page - 1 : page)} className="text-[0.5rem]"><CaretLeft /></button>
-            <span className="text-xxs text-muted">{page + 1}</span>
+            <span className="text-xsmall text-muted">{page + 1}</span>
             <button onClick={() => changePage(page + 1)} className="text-[0.5rem]"><CaretRight /></button>
           </div>
           )}

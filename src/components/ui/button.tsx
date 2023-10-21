@@ -10,18 +10,18 @@ const buttonVariants = cva(
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow enabled:hover:bg-primary-hover",
+          "bg-primary text-white shadow enabled:hover:bg-primary-hover",
         destructive:
           "bg-destructive text-destructive-foreground shadow-sm",
         outline:
-          "border border-transparent bg-transparent text-muted-foreground hover:border-muted-foreground hover:brightness-75",
+          "border border-transparent bg-transparent text-muted-foreground enabled:hover:border-muted-foreground enabled:hover:brightness-75",
         secondary:
-          "bg-secondary text-primary",
+          "bg-secondary text-primary enabled:hover:brightness-95",
       },
       size: {
         default: "h-8 rounded-full px-3.5 py-2",
         lg: "h-10 font-semibold text-sm rounded-full px-4 py-2.5",
-        small: "py-2 px-3 text-xxs leading-none gap-1 font-medium rounded-full",
+        small: "py-2 px-3 text-xs leading-none gap-1 font-medium rounded-full",
         icon: "h-8 w-8 rounded-full",
       },
     },

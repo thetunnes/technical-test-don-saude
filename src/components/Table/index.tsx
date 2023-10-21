@@ -50,7 +50,7 @@ interface THeadingProps extends ComponentProps<"th"> {
 }
 function THeading({ className = '', children, ...props}: THeadingProps) {
   return (
-    <th className={`text-xxs text-muted font-medium text-start ${className}`} {...props}>
+    <th className={`text-xsmall text-muted font-medium text-start ${className}`} {...props}>
       {children}
     </th>
   )
@@ -61,7 +61,7 @@ interface TDataProps extends ComponentProps<"th"> {
 }
 function TData({ className = '', children, ...props}: TDataProps) {
   return (
-    <td className={`text-xxs text-accent font-medium ${className}`} {...props}>
+    <td className={`text-xsmall text-accent font-medium ${className}`} {...props}>
       {children}
     </td>
   )

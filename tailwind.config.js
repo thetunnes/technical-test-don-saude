@@ -88,7 +88,7 @@ module.exports = {
         layout: 'minmax(60px, 200px) 1fr'
       },
       fontSize: {
-        xxs: "0.625rem"
+        xsmall: "0.625rem"
       }
     },
   },
